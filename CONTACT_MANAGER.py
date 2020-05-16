@@ -99,6 +99,12 @@ while variable_control != '9':
         contactos = buscar_contactos(ingreso,contact_book)
         for contacto in contactos:
            print('- '+ contacto)
+
+    elif (variable_control == '3'):
+        array_contactos = []
+        orden = 0
+        
+
         
 
 
