@@ -39,3 +39,5 @@ url = ' http://demo7130536.mockable.io/final-contacts-100'
 
 contactos_cargados = False
 variable_control = 0
+
+while contactos_cargados == False:
