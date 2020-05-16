@@ -138,6 +138,28 @@ while variable_control != '9':
     # solicitar qué contacto desea borrar (nombre o número de la lista)
     # Borrar el contacto con diferentes métodos dependiendo de si ingresó un número o el nombre
     # esperar 3 segundos y volver al menú principal
+    elif (variable_control == '4'):
+        array_contactos = []
+        orden = 0
+        for letra, contactos in contact_book.items():
+            print(letra +':')
+            for contacto, value in contactos.items():
+                orden += 1
+                print('   ' + str(orden) + '. '+contacto)
+                dict_modificado = value.copy()
+                dict_modificado['nombre'] = contacto
+                array_contactos.append(dict_modificado)
+        seleccionado = input('Borrar Contacto: ')
+        if (seleccionado.isnumeric()):
+            seleccionado = int(seleccionado)
+            letra = array_contactos[seleccionado-1].get('nombre')[0].upper()
+            contact_book[letra].pop(array_contactos[seleccionado-1].get('nombre'))
+            print("Contacto "+ array_contactos[seleccionado-1].get('nombre') + " Borrado")
+            time.sleep(3)
+        else:
+            contact_book[seleccionado[0].upper()].pop(seleccionado)     
+            print("Contacto "+ seleccionado + " Borrado")
+            time.sleep(3)   
         
 
 
