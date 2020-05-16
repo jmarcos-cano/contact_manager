@@ -72,6 +72,25 @@ while variable_control != '9':
     # validar nombre, telefono y email con las funciones de validación
     # si cumple con todas las características llamar a la función
     # guardar_contacto, con los valores provistos
+    if (variable_control == '1'):
+        nombre = input("Nombre: ")
+        if validar_nombre(nombre):
+            celular = input("Teléfono: ")
+            if validar_celular(celular):
+                mail = input("Correo: ")
+                if validators.email(mail):
+                    empresa = input("ingrese una empresa (Si no tiene una, presione Enter): ")
+                    extra = input("ingrese datos extra (Si no desea ingresar extras, presione Enter): ")     
+                    guardar_contacto(nombre, celular, mail, empresa, extra, contact_book)
+                else:
+                    print("Por favor ingrese un email válido")
+                    variable_control ='1'    
+            else:
+                print("El teléfono debe contener solo números")
+                variable_control ='1'    
+        else:
+            print("El nombre tiene que tener dos palabras")
+            variable_control='1'
 
 
 
