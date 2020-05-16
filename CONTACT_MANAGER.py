@@ -55,6 +55,20 @@ while contactos_cargados == False:
         contact_book = response.json()
         contactos_cargados = True
 
+while variable_control != '9':
+    print("""
+    ----------MANEJADOR DE CONTACTOS-----------
+            Elije una opción:
+            1. Agregar Contactos
+            2. Buscar Contactos
+            3. Listar Contactos 
+            4. Borrar Contacto
+            5. Llamar Contacto
+            6. Enviar Mensaje a un Contacto
+            7. Enviar Correo a Contacto
+            8. Exportar Contactos
+            9. Salir""")
+
 
 
 
