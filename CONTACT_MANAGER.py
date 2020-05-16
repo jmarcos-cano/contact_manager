@@ -94,6 +94,10 @@ while variable_control != '9':
 
     elif (variable_control == '2'):
         ingreso = input('Buscar: ')
+        contactos = buscar_contactos(ingreso,contact_book)
+        for contacto in contactos:
+           print('- '+ contacto)
+        
 
 
 
