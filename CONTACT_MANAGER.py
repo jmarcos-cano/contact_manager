@@ -68,6 +68,7 @@ while variable_control != '9':
             7. Enviar Correo a Contacto
             8. Exportar Contactos
             9. Salir""")
+    variable_control = input(">>>")
 
 
 
