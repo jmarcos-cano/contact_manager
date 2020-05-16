@@ -69,6 +69,9 @@ while variable_control != '9':
             8. Exportar Contactos
             9. Salir""")
     variable_control = input(">>>")
+    # validar nombre, telefono y email con las funciones de validación
+    # si cumple con todas las características llamar a la función
+    # guardar_contacto, con los valores provistos
 
 
 
