@@ -133,6 +133,11 @@ while variable_control != '9':
                     print("\U0001F4E7  email: "+ persona.get('email'))
                     print("\U0001F3E2  company: "+ persona.get('company'))
                     print("\U00012795  extra: "+ persona.get('extra'))
+    
+    # Mostrar los contactos con el mismo método de iteración que la opción anterior
+    # solicitar qué contacto desea borrar (nombre o número de la lista)
+    # Borrar el contacto con diferentes métodos dependiendo de si ingresó un número o el nombre
+    # esperar 3 segundos y volver al menú principal
         
 
 
