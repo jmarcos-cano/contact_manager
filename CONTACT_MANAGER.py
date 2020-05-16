@@ -24,3 +24,6 @@ def guardar_contacto(nombre, telefono, email, company, extra, libro_contactos):
             'company': company,
             'extra': extra
         }
+
+def buscar_contactos(ingreso, libro_contactos):
+    coincidencias = []
