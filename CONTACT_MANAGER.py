@@ -92,6 +92,9 @@ while variable_control != '9':
             print("El nombre tiene que tener dos palabras")
             variable_control='1'
 
+    elif (variable_control == '2'):
+        ingreso = input('Buscar: ')
+
 
 
 
