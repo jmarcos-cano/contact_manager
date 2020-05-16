@@ -92,6 +92,8 @@ while variable_control != '9':
             print("El nombre tiene que tener dos palabras")
             variable_control='1'
 
+# solicitar un nombre de contacto a buscar, llamar a la función buscar_contactos
+# y mostrar todos los contactos que contengan el string ingresado por el usuario
     elif (variable_control == '2'):
         ingreso = input('Buscar: ')
         contactos = buscar_contactos(ingreso,contact_book)
