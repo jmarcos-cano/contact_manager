@@ -123,6 +123,10 @@ while variable_control != '9':
             for persona in array_contactos:
                 if persona.get('nombre') == seleccionado:
                     print(persona.get('nombre'))
+                    print("\U0001f4DE  telefono: "+ persona.get('telefono'))
+                    print("\U0001F4E7  email: "+ persona.get('email'))
+                    print("\U0001F3E2  company: "+ persona.get('company'))
+                    print("\U00012795  extra: "+ persona.get('extra'))
         
 
 
