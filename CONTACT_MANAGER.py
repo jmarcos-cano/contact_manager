@@ -103,6 +103,8 @@ while variable_control != '9':
      # Listar contactos iterando sobre el libro de contactos y luego sobre cada contacto individual
     # array_contactos almacena los contactos en orden para poder presentárselo a los usuarios con
     # números.
+    # Luego imprimir el contacto seleccionado, dependiendo de si ingresa el nombre o el número de 
+    # la lista
 
     elif (variable_control == '3'):
         array_contactos = []
