@@ -107,6 +107,18 @@ while variable_control != '9':
             print(letra +':')
             for contacto, value in contactos.items():
                 orden += 1
+                print('   ' + str(orden) + '. '+contacto)
+                dict_modificado = value.copy()
+                dict_modificado['nombre'] = contacto
+                array_contactos.append(dict_modificado)
+        seleccionado = input('Ver Contacto: ')
+        if (seleccionado.isnumeric()):
+            seleccionado = int(seleccionado)
+            print(array_contactos[seleccionado-1].get('nombre'))
+            print("\U0001f4DE  telefono: "+ array_contactos[seleccionado-1].get('telefono'))
+            print("\U0001F4E7  email: "+ array_contactos[seleccionado-1].get('email'))
+            print("\U0001F3E2  company: "+ array_contactos[seleccionado-1].get('company'))
+            print('\U00012795    extra: '+
         
 
         
