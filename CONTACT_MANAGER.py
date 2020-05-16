@@ -5,3 +5,9 @@ from requests.exceptions import HTTPError
 import validators
 import time
 import csv
+# validar si en el nombre ingresado hay dos palabras (nombre y apellido)
+def validar_nombre(nombre):
+    return len(nombre.split()) == 2
+# validar si el celular contiene solo numeros
+def validar_celular(celular):
+    return celular.isdecimal()
