@@ -25,5 +25,11 @@ def guardar_contacto(nombre, telefono, email, company, extra, libro_contactos):
             'extra': extra
         }
 
+# Buscar los nombres de contactos que hagan match con el dato ingresado
 def buscar_contactos(ingreso, libro_contactos):
     coincidencias = []
+    for letra, contactos in libro_contactos.items():
+        for contacto, value in contactos.items():
+            if(ingreso in contacto):
+                coincidencias.append(contacto)
+    return coincidencias
