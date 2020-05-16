@@ -14,3 +14,4 @@ def validar_celular(celular):
 
 # guardar un contacto en el libro de contactos, si no se encuentra la letra aun
 # crear una llave con la inicial del nombre a guardar
+def guardar_contacto(nombre, telefono, email, company, extra, libro_contactos):
