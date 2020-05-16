@@ -103,6 +103,10 @@ while variable_control != '9':
     elif (variable_control == '3'):
         array_contactos = []
         orden = 0
+        for letra, contactos in contact_book.items():
+            print(letra +':')
+            for contacto, value in contactos.items():
+                orden += 1
         
 
         
