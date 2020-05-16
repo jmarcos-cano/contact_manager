@@ -41,3 +41,5 @@ contactos_cargados = False
 variable_control = 0
 
 while contactos_cargados == False:
+    #  descomentar la linea de abajo para que el usuario pueda ingresar la url 
+    #url = input("Ingrese la url con el álbum de contactos para iniciar el programa: ")
