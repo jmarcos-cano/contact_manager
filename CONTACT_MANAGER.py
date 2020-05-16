@@ -43,3 +43,18 @@ variable_control = 0
 while contactos_cargados == False:
     #  descomentar la linea de abajo para que el usuario pueda ingresar la url 
     #url = input("Ingrese la url con el álbum de contactos para iniciar el programa: ")
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+    except HTTPError as http_err:
+        print('HTTP error occurred')  
+    except Exception as err:
+        print('Other error occurred')
+    else:
+        print('Se han actualizado los contactos')
+        contact_book = response.json()
+        contactos_cargados = True
+
+
+
+
