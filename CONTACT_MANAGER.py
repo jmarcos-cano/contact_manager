@@ -100,6 +100,10 @@ while variable_control != '9':
         for contacto in contactos:
            print('- '+ contacto)
 
+     # Listar contactos iterando sobre el libro de contactos y luego sobre cada contacto individual
+    # array_contactos almacena los contactos en orden para poder presentárselo a los usuarios con
+    # números.
+
     elif (variable_control == '3'):
         array_contactos = []
         orden = 0
