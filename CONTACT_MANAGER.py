@@ -160,6 +160,37 @@ while variable_control != '9':
             contact_book[seleccionado[0].upper()].pop(seleccionado)     
             print("Contacto "+ seleccionado + " Borrado")
             time.sleep(3)   
+
+    elif (variable_control == '5' or variable_control == '6'):
+        array_contactos = []
+        orden = 0
+        for letra, contactos in contact_book.items():
+            print(letra +':')
+            for contacto, value in contactos.items():
+                orden += 1
+                print('   ' + str(orden) + '. '+contacto)
+                dict_modificado = value.copy()
+                dict_modificado['nombre'] = contacto
+                array_contactos.append(dict_modificado)
+        if(variable_control == '5'):
+            seleccionado = input('A qué contacto desea llamar?: ')
+        else:
+            seleccionado = input('A qué contacto desea Enviar Mensaje?: ')
+
+        if (seleccionado.isnumeric()):
+            seleccionado = int(seleccionado)
+            nombre = array_contactos[seleccionado-1].get('nombre')
+            telefono = array_contactos[seleccionado-1].get('telefono')
+        else:
+            nombre = seleccionado
+            telefono = contact_book[seleccionado[0].upper()].get(seleccionado).get('telefono')     
+        if(variable_control == '5'):
+            print("Llamando a  "+ nombre + " al \U0001f4DE: " + telefono)    
+        else:
+            mensaje = input('Mensaje >>> ')
+            print("Hola "+ nombre + " - " + telefono)    
+            print('    > '+mensaje)
+        time.sleep(3)        
         
 
 
