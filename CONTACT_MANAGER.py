@@ -161,6 +161,10 @@ while variable_control != '9':
             print("Contacto "+ seleccionado + " Borrado")
             time.sleep(3)   
 
+    # Mostrar los contactos con el mismo método de iteración que la opción (3)
+    # Si el usuario seleccionó 5, solicitar a qué contacto desea llamar
+    # si el usuario seleccionó 6, solicitar a qué contacto desea enviar mensaje
+
     elif (variable_control == '5' or variable_control == '6'):
         array_contactos = []
         orden = 0
