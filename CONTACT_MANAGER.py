@@ -232,7 +232,34 @@ while variable_control != '9':
         print("Enviando \U0001F4E7 a "+ nombre + " - " + email)    
         print('    > '+subject)
         print('    > '+mensaje)
-        time.sleep(3)        
+        time.sleep(3)     
+
+
+    # Formatear cada contacto para que tengan las llaves con los nombres especificados en los requerimientos del proyecto
+    # usar la librería csv para exportar el archivo csv 
+    elif (variable_control == '8'):
+        array_contactos = []
+        orden = 0
+        for letra, contactos in contact_book.items():
+            for contacto, value in contactos.items():
+                contacto_actualizado = value.copy()
+                contacto_actualizado['nombre'] = contacto
+                contacto_formateado = {}
+                contacto_formateado['contactonombre'] = contacto_actualizado['nombre'] 
+                contacto_formateado['telefono'] = contacto_actualizado['telefono'] 
+                contacto_formateado['email'] = contacto_actualizado['email'] 
+                contacto_formateado['empresa'] = contacto_actualizado['company'] 
+                contacto_formateado['extra'] = contacto_actualizado['extra'] 
+                array_contactos.append(contacto_formateado)
+        with open('data.csv', 'w', encoding='utf8', newline='') as output_file:
+            fc = csv.DictWriter(output_file, fieldnames=array_contactos[0].keys())
+            fc.writeheader()
+            fc.writerows(array_contactos)
+       
+    elif (variable_control == '9'):
+        print('Gracias por usar el manejador de contactos');
+    else:
+        print('Porfavor ingrese un número válido');   
 
 
 
