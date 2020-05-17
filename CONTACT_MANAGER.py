@@ -199,7 +199,40 @@ while variable_control != '9':
             print('    > '+mensaje)
         time.sleep(3)        
         
+    # Mostrar los contactos con el mismo método de iteración que la opción (3)
+    # solicitar qué contacto desea utilizar para enviar un correo (nombre o número de la lista)
+    # Solicitar asunto del correo
+    # solicitar cuerpo del correo
+    # mostrar contacto al que se le está enviando el correo junto con su dirección
+    # esperar tres segundos y salir al menú principal
+    elif (variable_control == '7'):
+        array_contactos = []
+        orden = 0
+        for letra, contactos in contact_book.items():
+            print(letra +':')
+            for contacto, value in contactos.items():
+                orden += 1
+                print('   ' + str(orden) + '. '+contacto)
+                dict_modificado = value.copy()
+                dict_modificado['nombre'] = contacto
+                array_contactos.append(dict_modificado)
 
+        seleccionado = input('A qué contacto desea enviar Correo?: ')
+
+        if (seleccionado.isnumeric()):
+            seleccionado = int(seleccionado)
+            nombre = array_contactos[seleccionado-1].get('nombre')
+            email = array_contactos[seleccionado-1].get('email')
+        else:
+            nombre = seleccionado
+            email = contact_book[seleccionado[0].upper()].get(seleccionado).get('email')     
+        
+        subject = input('Subject >>> ')
+        mensaje = input('Mensaje >>> ')
+        print("Enviando \U0001F4E7 a "+ nombre + " - " + email)    
+        print('    > '+subject)
+        print('    > '+mensaje)
+        time.sleep(3)        
 
 
 
