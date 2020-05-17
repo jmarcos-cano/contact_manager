@@ -164,6 +164,9 @@ while variable_control != '9':
     # Mostrar los contactos con el mismo método de iteración que la opción (3)
     # Si el usuario seleccionó 5, solicitar a qué contacto desea llamar
     # si el usuario seleccionó 6, solicitar a qué contacto desea enviar mensaje
+    # solicitar qué contacto desea utilizar para realizar la acción (nombre o número de la lista)
+    # Mostrar en pantalla que se está llamando al contacto (opción 5) o que se está enviando mensaje (opción 6)
+    # esperar 3 segundos y volver al menú principal
 
     elif (variable_control == '5' or variable_control == '6'):
         array_contactos = []
