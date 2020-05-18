@@ -35,7 +35,7 @@ def buscar_contactos(ingreso, libro_contactos):
     return coincidencias
 
 # esta url puede ser sustituida antes de iniciar el programa
-url = ' http://demo7130536.mockable.io/final-contacts-100'
+url = 'http://demo7130536.mockable.io/final-contacts-100'
 
 contactos_cargados = False
 variable_control = 0
